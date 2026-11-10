@@ -1,0 +1,109 @@
+﻿
+/* General website styling */
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #F4F0E6;
+    color: #283829;
+}
+
+/* Main form container */
+.form-container {
+    width: 90%;
+    max-width: 420px;
+    margin: 70px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+/* Page headings */
+h1 {
+    color: #283829;
+    font-size: 30px;
+}
+
+/* Text beneath headings */
+.form-container p {
+    color: #6B7350;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-top: 18px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Form inputs */
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #C9CEBD;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Highlight input when selected */
+input:focus {
+    outline: 2px solid #6B7350;
+    border-color: #6B7350;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 25px;
+    background-color: #283829;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #6B7350;
+    }
+
+/* Links */
+a {
+    color: #516A45;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+.form-container img {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+/* Navigation menu */
+.navbar {
+    background-color: #283829;
+    text-align: center;
+    padding: 18px;
+}
+
+    /* Navigation links */
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 18px;
+        font-size: 16px;
+    }
+
+        /* Change link color when mouse hovers */
+        .navbar a:hover {
+            color: #D4C29B;
+        }
