@@ -23,3 +23,34 @@ function showDua(emotion) {
         "<h3 dir='rtl'>" + dua + "</h3>" +
         "<p>Source: " + source + "</p>";
 }
+
+
+function showAdhkarChecklist() {
+
+    var result = "<h3>My Daily Remembrance</h3>";
+    var adhkarName = "";
+
+    for (var i = 1; i <= 4; i++) {
+
+        if (i == 1) {
+            adhkarName = "Morning Adhkar";
+        }
+        else if (i == 2) {
+            adhkarName = "Evening Adhkar";
+        }
+        else if (i == 3) {
+            adhkarName = "Before Sleeping";
+        }
+        else {
+            adhkarName = "After Prayer";
+        }
+
+        result += "<p><input type='checkbox' class='adhkar-checkbox'> "
+            + adhkarName + "</p>";
+    }
+
+    document.getElementById("adhkar-checklist").innerHTML = result;
+
+    document.getElementById("adhkar-checklist").style.borderColor = "#6B7350";
+
+}
