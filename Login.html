@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head> <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login | Sakeenah </title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="about.html">About Us</a>
+    </nav>
+
+    <div class="form-container">
+
+        <a href="about.html">
+            <img src="images/logo.png"
+                 alt="Sakeenah Logo"
+                 width="150"
+                 height="180">
+        </a>
+
+        <map name="logoMap">
+            <area shape="rect"
+                  coords="0,0,150,180"
+                  href="about.html"
+                  alt="About Sakeenah">
+        </map>
+
+
+        <h1>Welcome Back to Sakeena</h1>
+        <p>Find Peace Through Rememberence</p>
+
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <lable>Email: </lable>
+            <input type="email" id="email" name="email" required />
+
+            <br /><br />
+
+            <label>Password: </label>
+            <input type="password" id="password" name="password" required />
+
+            <br /> <br />
+
+            <button type="submit">Login</button>
+
+            <p id="loginMessage" aria-live="polite"></p>
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+        </p>
+
+        <script src="auth.js"></script>
+</body> </div>
+</html>
