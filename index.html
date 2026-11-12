@@ -5,116 +5,140 @@
     <meta charset="UTF-8">
     <title>Sakeenah | Home</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .home-subtitle {
+            text-align: center;
+            color: #6B7350;
+            font-size: 17px;
+        }
+    </style>
+
 </head>
 
-<body>
+<body class="home-page">
 
     <header>
-        <h1>سكينة | Sakeenah</h1>
 
-        <nav>
-            <a href="Index.html">Home</a>
-            <a href="Login.html">Login</a>
-            <a href="Signup.html">Sign Up</a>
-            <a href="About.html">About Us</a>
-            <a href="#adhkar">Daily Adhkar</a>
+        <div class="header-logo">
+            <a href="about.html">
+                <img src="images/logo.png"
+                     alt="Sakeenah Logo"
+                     width="110"
+                     height="132">
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="Login.html">Login</a>
+            <a class="nav-link" href="Signup.html">Sign Up</a>
+            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="#adhkar">Daily Adhkar</a>
         </nav>
     </header>
 
     <main>
+            <section id="welcome" class="hero-section">
+                <div class="hero-label-position">
+                    <span class="hero-label">A Moment of Peace</span>
+                </div>
 
-        
-    <a href="About.html">
-    <img src="sakeenah.png"
-         alt="Sakeenah Logo"
-         width="300"
-         height="200">
-    </a>
+                <h2 style="letter-spacing: 1px;">
+                    Find Comfort Through Remembrance
+                </h2>
 
-        <section id="welcome">
-            <h2>Find Comfort Through Remembrance</h2>
+                <p class="home-subtitle">
+                    Welcome to Sakeenah, a peaceful space to explore Duas, Adhkar, and Sunnah.
+                </p>
 
-            <p>
-                Welcome to Sakeenah, a peaceful space
-                to explore Duas, Adhkar, and Sunnah.
-            </p>
-        </section>
+            </section>
 
-        <section id="emotions">
-            <h2>How Are You Feeling Today?</h2>
+            <section id="emotions" class="content-card">
+                <h2>How Are You Feeling Today?</h2>
 
-            <p>
-                Select an emotion to discover a Dua.
-            </p>
+                <p>
+                    Select an emotion to discover a Dua.
+                </p>
 
 
-<div class="emotion-buttons">
-    <button type="button" onclick="showDua('sad')">Sad</button>
-    <button type="button" onclick="showDua('anxious')">Anxious</button>
-    <button type="button" onclick="showDua('grateful')">Grateful</button>
-    <button type="button" onclick="showDua('happy')">Happy</button>
-</div>
+
+                <div class="emotion-buttons">
+                    <button type="button" class="emotion-button" onclick="showDua('sad')">Sad</button>
+                    <button type="button" class="emotion-button" onclick="showDua('anxious')">Anxious</button>
+                    <button type="button" class="emotion-button" onclick="showDua('grateful')">Grateful</button>
+                    <button type="button" class="emotion-button" onclick="showDua('happy')">Happy</button>
+                </div>
 
 
-<div id="dua-result">
-    <p>Your Dua will appear here.</p>
-</div>
 
-        </section>
-    
-<section id="adhkar">
-    <h2>Daily Adhkar | الأذكار اليومية</h2>
+                <div id="dua-result" class="dua-result">
+                    <p>Your Dua will appear here.</p>
+                </div>
 
-    <p>
-        Remember Allah throughout your day
-        with daily Adhkar.
-    </p>
+            </section>
 
-    <ul>
-        <li>Morning Adhkar</li>
-        <li>Evening Adhkar</li>
-        <li>Before Sleeping</li>
-        <li>After Prayer</li>
-    </ul>
+            <section id="adhkar" class="content-card">
+                <h2>Daily Adhkar | الأذكار اليومية</h2>
 
-    <h3>Daily Remembrance Guide</h3>
+                <p>
+                    Remember Allah throughout your day
+                    with daily Adhkar.
+                </p>
 
-    <table border="1">
-        <tr>
-            <th>Time</th>
-            <th>Adhkar</th>
-        </tr>
-        <tr>
-            <td>Morning</td>
-            <td>Morning Adhkar</td>
-        </tr>
-        <tr>
-            <td>Evening</td>
-            <td>Evening Adhkar</td>
-        </tr>
-        <tr>
-            <td>Before Sleep</td>
-            <td>Sleeping Adhkar</td>
-        </tr>
-    </table>
-</section>
+                <ul>
+                    <li>Morning Adhkar</li>
+                    <li>Evening Adhkar</li>
+                    <li>Before Sleeping</li>
+                    <li>After Prayer</li>
+                </ul>
 
-<section id="sunnah">
-    <h2>Daily Sunnah | السنن اليومية</h2>
+                <button type="button" class="adhkar-button"
+                        onclick="showAdhkarChecklist()">
+                    My Daily Adhkar Checklist
+                    <span id="adhkar-arrow" class="adhkar-arrow">▼</span>
+                </button>
 
-    <p>
-        Discover simple Sunnah practices
-        to include in your daily life.
-    </p>
+                <div id="adhkar-checklist" class="adhkar-checklist" style="display: none;"></div>
 
-    <ul>
-        <li>Saying Bismillah before eating</li>
-        <li>Greeting others with Salam</li>
-        <li>Eating with the right hand</li>
-    </ul>
-</section>
+                <h3>Daily Remembrance Guide</h3>
 
-    </main>
-<script src="script.js"></script>
+                <table class="adhkar-table">
+                    <tr>
+                        <th>Time</th>
+                        <th>Adhkar</th>
+                    </tr>
+                    <tr>
+                        <td>Morning</td>
+                        <td>Morning Adhkar</td>
+                    </tr>
+                    <tr>
+                        <td>Evening</td>
+                        <td>Evening Adhkar</td>
+                    </tr>
+                    <tr>
+                        <td>Before Sleep</td>
+                        <td>Sleeping Adhkar</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="sunnah" class="content-card">
+                <h2>Daily Sunnah | السنن اليومية</h2>
+
+                <p>
+                    Discover simple Sunnah practices
+                    to include in your daily life.
+                </p>
+
+                <ul>
+                    <li>Saying Bismillah before eating</li>
+                    <li>Greeting others with Salam</li>
+                    <li>Eating with the right hand</li>
+                </ul>
+            </section>
+
+</main>
+    <script src="script.js"></script>
 </body>
 </html>
