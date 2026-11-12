@@ -292,6 +292,28 @@ a {
     text-align: center;
 }
 
+/* About Us logo */
+.about-logo {
+    text-align: center;
+    margin-top: 25px;
+}
 
+
+.home-logo {
+    text-align: center;
+    margin: 25px auto;
+}
+
+/* Website header logo */
+.header-logo {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Checklist dropdown arrow */
+.adhkar-arrow {
+    margin-left: 12px;
+    font-size: 14px;
+}
 
 

@@ -25,7 +25,16 @@ function showDua(emotion) {
 }
 
 
+
 function showAdhkarChecklist() {
+
+    var checklist = document.getElementById("adhkar-checklist");
+
+    if (checklist.style.display == "block") {
+        checklist.style.display = "none";
+        document.getElementById("adhkar-arrow").innerHTML = "▼";
+        return;
+    }
 
     var result = "<h3>My Daily Remembrance</h3>";
     var adhkarName = "";
@@ -49,8 +58,9 @@ function showAdhkarChecklist() {
             + adhkarName + "</p>";
     }
 
-    document.getElementById("adhkar-checklist").innerHTML = result;
-
-    document.getElementById("adhkar-checklist").style.borderColor = "#6B7350";
-
+    checklist.innerHTML = result;
+    checklist.style.borderColor = "#6B7350";
+    checklist.style.display = "block";
+    document.getElementById("adhkar-arrow").innerHTML = "▲";
 }
+
