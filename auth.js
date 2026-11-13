@@ -7,10 +7,6 @@ function validateLogin() {
     if (email == "" || password == "") {
         alert("Please fill in all fields.");
     }
-    else if (email.indexOf("@") == -1 ||
-        email.indexOf(".") == -1) {
-        alert("Please enter a valid email address.");
-    }
     else {
         alert("Login form validated successfully!");
     }
@@ -19,11 +15,7 @@ function validateLogin() {
 }
 
 
-
-
 // Sign-up form
-
-
 function validateSignup() {
 
     var fullName = document.getElementById("fullname").value;
@@ -31,8 +23,9 @@ function validateSignup() {
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (password.length < 8) {
-        alert("Password must be at least 8 characters long.");
+    if (fullName == "" || email == "" ||
+        password == "" || confirmPassword == "") {
+        alert("Please fill in all fields.");
     }
     else if (password != confirmPassword) {
         alert("Passwords do not match.");
@@ -43,5 +36,3 @@ function validateSignup() {
 
     return false;
 }
-
-
