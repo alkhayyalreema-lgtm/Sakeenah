@@ -9,8 +9,7 @@ body {
 
 /* Main form container */
 .form-container {
-    width: 90%;
-    max-width: 420px;
+    width: 420px;
     margin: 70px auto;
     padding: 35px;
     background-color: white;
@@ -51,7 +50,6 @@ input {
 
     /* Highlight input when selected */
     input:focus {
-        outline: 2px solid #6B7350;
         border-color: #6B7350;
     }
 
@@ -65,7 +63,6 @@ input {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    cursor: pointer;
 }
 
     .form-button:hover {
@@ -75,12 +72,7 @@ input {
 /* Links */
 a {
     color: #516A45;
-    text-decoration: none;
 }
-
-    a:hover {
-        text-decoration: underline;
-    }
 
 .form-container img {
     display: block;
@@ -102,7 +94,6 @@ a {
 .nav-link {
     display: inline-block;
     color: white;
-    text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
 }
@@ -123,7 +114,6 @@ a {
     color: white;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
 }
 
     .emotion-button:hover {
@@ -135,18 +125,18 @@ a {
 .hero-section {
     background-color: #E8EBDD;
     text-align: center;
-    padding: 45px 25px;
+    padding: 40px;
     margin: 25px auto;
-    max-width: 900px;
     border-radius: 16px;
     position: relative;
     z-index: 1;
+    width: 70%;
 }
 
 /* Homepage content cards */
 .content-card {
     background-color: white;
-    max-width: 900px;
+    width: 70%;
     margin: 25px auto;
     padding: 30px;
     border-radius: 16px;
@@ -163,24 +153,14 @@ a {
 }
 
 
-/* Welcome section */
-.hero-section {
-    background-color: #E8EBDD;
+/* Position the welcome label */
+.hero-label-position {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
     text-align: center;
-    padding: 40px;
-    margin: 25px auto;
-    max-width: 900px;
-    border-radius: 16px;
-}
-
-/* Homepage content cards */
-.content-card {
-    background-color: white;
-    padding: 30px;
-    margin: 25px auto;
-    max-width: 900px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    z-index: 2;
 }
 
 /* About Us page */
@@ -192,7 +172,6 @@ a {
 
 /* About Us lists */
 .about-list {
-    line-height: 2;
     color: #283829;
 }
 
@@ -200,14 +179,12 @@ a {
 /* Daily Adhkar checklist button */
 .adhkar-button {
     display: block;
-    width: 100%;
-    box-sizing: border-box;
+    width: 90%;
     background-color: #283829;
     color: white;
     padding: 15px 20px;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
     margin-top: 20px;
     text-align: center;
 
@@ -232,8 +209,6 @@ a {
 .adhkar-checkbox {
     width: auto;
     margin-right: 12px;
-    cursor: pointer;
-    accent-color: #283829;
 }
 
 /* Checklist heading */
@@ -266,16 +241,6 @@ a {
         border: 1px solid #C9CEBD;
     }
 
-
-/* Position and center the label */
-.hero-label-position {
-    position: absolute;
-    top: -15px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-}
 
 /* Style the label */
 .hero-label {
