@@ -19,9 +19,16 @@ function showDua(emotion) {
         source = "Surah Al-Baqarah, 2:201";
     }
 
-    document.getElementById("dua-result").innerHTML =
-        "<h3 dir='rtl'>" + dua + "</h3>" +
-        "<p>Source: " + source + "</p>";
+   
+document.getElementById("dua-result").innerHTML =
+    "<h3 dir='rtl'>" + dua + "</h3>" +
+    "<p>Source: " + source + "</p>";
+
+var picture = "images/" + emotion + ".png";
+
+document.getElementById("emotion-image").src = picture;
+document.getElementById("emotion-image").style.display = "block";
+
 }
 
 
