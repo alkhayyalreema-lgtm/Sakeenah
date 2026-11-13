@@ -28,6 +28,7 @@ var picture = "images/" + emotion + ".png";
 
 document.getElementById("emotion-image").src = picture;
 document.getElementById("emotion-image").style.display = "block";
+document.getElementById("image-cell").style.display = "";
 
 }
 
@@ -70,4 +71,3 @@ function showAdhkarChecklist() {
     checklist.style.display = "block";
     document.getElementById("adhkar-arrow").innerHTML = "▲";
 }
-
