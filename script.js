@@ -66,7 +66,10 @@ function showAdhkarChecklist() {
             + adhkarName + "</p>";
     }
 
+    
+if (checklist.innerHTML == "") {
     checklist.innerHTML = result;
+}
     checklist.style.borderColor = "#6B7350";
     checklist.style.display = "block";
     document.getElementById("adhkar-arrow").innerHTML = "▲";
