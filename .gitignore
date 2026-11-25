@@ -1,1 +1,13 @@
+
+# ASP.NET build files
+**/bin/
+**/obj/
 .vs/
+
+# macOS files
+.DS_Store
+
+# Local database files
+**/app.db
+**/app.db-shm
+**/app.db-wal
