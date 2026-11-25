@@ -23,8 +23,34 @@
     <h2>Find Comfort Through Remembrance</h2>
 
     <p class="home-subtitle">
-        Welcome to Sakeenah, a peaceful space to explore Duas, Adhkar, and Sunnah.
-    </p>
+    @if (ViewData["Language"]?.ToString() == "ar")
+    {
+        <span dir="rtl">
+            مرحبًا بك في سكينة، مساحة هادئة لاستكشاف الأدعية والأذكار والسنن.
+        </span>
+    }
+    else
+    {
+        <span>
+            Welcome to Sakeenah, a peaceful space to explore Duas, Adhkar, and Sunnah.
+        </span>
+    }
+</p>
+<form asp-controller="Home" asp-action="SetLanguage" method="post">
+
+    <div class="emotion-buttons">
+
+        <button type="submit" name="language" value="en" class="emotion-button">
+            English
+        </button>
+
+        <button type="submit" name="language" value="ar" class="emotion-button">
+            العربية
+        </button>
+
+    </div>
+
+</form>
 </section>
 
 <section id="emotions" class="content-card">
@@ -32,12 +58,25 @@
 
     <p>Select an emotion to discover a Dua.</p>
 
+    <form asp-controller="Home" asp-action="SelectEmotion" method="post">
+
     <div class="emotion-buttons">
-        <button type="button" class="emotion-button" onclick="showDua('sad')">Sad</button>
-        <button type="button" class="emotion-button" onclick="showDua('anxious')">Anxious</button>
-        <button type="button" class="emotion-button" onclick="showDua('grateful')">Grateful</button>
-        <button type="button" class="emotion-button" onclick="showDua('happy')">Happy</button>
+
+        <button type="submit" name="emotion" value="sad" class="emotion-button">Sad</button>
+
+        <button type="submit" name="emotion" value="anxious" class="emotion-button">Anxious</button>
+
+        <button type="submit" name="emotion" value="grateful" class="emotion-button">Grateful</button>
+
+        <button type="submit" name="emotion" value="happy" class="emotion-button">Happy</button>
+
     </div>
+
+</form>
+@if (ViewData["SelectedEmotion"] != null)
+{
+    <p>You selected: @ViewData["SelectedEmotion"]</p>
+}
 
     <table width="100%">
         <tr>
@@ -133,4 +172,11 @@
         document.getElementById("sunnah-title").innerHTML =
             "Sunnah Spotlight - Daily Reminder";
     </script>
+
+    @if (ViewData["SelectedEmotion"] != null)
+    {
+        <script>
+            showDua('@ViewData["SelectedEmotion"]');
+        </script>
+    }
 }
